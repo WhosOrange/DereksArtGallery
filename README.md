@@ -7,5 +7,4 @@ I'll get the hang of it eventually :)
 
 # What May Be Here?
 There could be some archives of old Java and C/C++ programs.
-Maybe some artwork displayed on the pages.
-MAYBE SOME OLD OLD MUGEN... :D
+Maybe some artwork displayed on the pages :D
