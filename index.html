@@ -54,7 +54,6 @@
             margin-left: auto;
             margin-right: auto;
             text-shadow: 0px 0px 4px black;
-            transform: rotateY(20deg) rotateZ(-2deg) rotateX(-22deg);
             background-color: rgba(0, 0, 0, 0.5);
         }
         
@@ -65,10 +64,6 @@
         
         #ulHome li {
             transition-duration: 2s;
-        }
-        
-        #ulHome li:hover {
-            color: #ffffff;
         }
         
         #liDraw {
@@ -113,6 +108,23 @@
         
         #li3D {
             color: #000000;
+        }
+
+        /* Media Query */
+        @media screen and (min-width: 420px) {
+            #zaContent {
+                transform: rotateY(20deg) rotateZ(-2deg) rotateX(-22deg);
+            }
+
+            #ulHome li:hover {
+                color: #ffffff;
+            }
+        }
+
+        @media screen and (max-width: 419px) {
+            #zaContent {
+                background-color: #000000;
+            }
         }
         
     </style>
