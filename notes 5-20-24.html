@@ -1,0 +1,153 @@
+<html>
+<head>
+  <title>Notes: 5/20/24 - 5/22/24</title>
+  <!-- faviocon and meta info here -->
+  <style>
+    body {
+      text-align: center;
+    }
+    
+    h1 {
+      text-align: center;
+    }
+    
+    div {
+      text-align: left;
+    }
+    
+    #navBar {
+      text-align: center;
+    }
+    
+    .done {
+      color: rgba(128, 255, 150, 0.8);
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Notes: 5/20/24 through 5/24/24</h1>
+  <div id="navBar">
+    <button id="btnHome" onmouseover="navDisplay(0);">Home</button>
+    <button id="btnToDo" onmouseover="navDisplay(1);">To Do</button>
+    <button id="btnObjectInfo" onmouseover="navDisplay(2);">About the Objects?</button>
+    <button id="btnForm" onmouseover="navDisplay(3);">Form Testing</button>
+    <button id="btnMapEdit" onmouseover="navDisplay(4);">Map Editor</button> 
+    <button id="btnGame" onmouseover="navDisplay(5);">Game Time</button>
+  </div>
+  <hr>
+  
+  <div id="home">
+    <h2>Welcome To :D's Silly Notes</h2>
+    <p>Trying to achieve to some mild dreams before things get busy.</p>
+    <p id="homeTextBottom"></p>
+  </div>
+  
+  <div id="todo">
+    <ul>
+      <li>try to make the map editor for FC1 for the June projects</li>
+      <li class="done">charge laptop</li>
+      <li>create a small tile set from images</li>
+      <li>create some tile images in GIMP</li>
+      <li>create objects from list (player, npcs, enemies, chests, etc.)</li>
+      <li class="done">get ready for party</li>
+      <li class="done">add navigation</li>
+      <li class="done">add forms and reading inputs</li>
+      <li>add meta information</li>
+      <li>create in GIMP an icon for his site</li>
+      <li>add a cool background style for this page</li>
+    </ul>
+  </div>
+  
+  <div id="formTesting">
+    <form id="someForm">
+      <label id="danLabel" for="dan">Name of something: </label>
+      <input id="dan" name="dan" type="text" placeholder="Dan">
+      
+      <label id="gameTitleLabel" for="gameTitleInput">Name of the game: </label>
+      <input id="gameTitleInput" name="gameTitleInput" type="text" placeholder="Cool game" onchange="formTitleChange();"> 
+      
+      <br>
+      <button id="someFormSubmit" onclick="formTitleChange();">Change</button>
+      <button id="someFormDom" onclick="formDom();">Dominate</button>
+    </form>
+  </div>
+  
+  <div id="aboutObjects">
+    <h2 id="aboutObjectsHeader">What You Can Find in the Game</h2>
+  </div>
+  
+  <div id="mapEditor">
+    <div id="zaEditor">
+      <h3>Editor</h3>
+    </div>
+    
+    <div id="mapEditPreview">
+      <u><b>Preview</b></u>
+    </div>
+    
+  </div>
+  
+  <div id="zaGame">
+    <h2 id="gameTitle">It's Game Time</h2>
+  </div>
+  
+  <script id="zaScript" defer>
+    // Script for this page
+    
+    
+    // Navigation Script
+    var navOptions = [
+      "home",
+      "todo",
+      "aboutObjects",
+      "formTesting",
+      "mapEditor",
+      "zaGame"
+    ];
+    var navOptionLength = navOptions.length;
+    
+    function navDisplay(input) {
+      for (ndI = 0; ndI < navOptionLength; ndI++) {
+        if (ndI != input) {
+          document.getElementById(navOptions[ndI]).style.display = "none";
+        }
+        else {
+          document.getElementById(navOptions[ndI]).style.display = "block";
+        }
+      }
+    };
+    
+    // Form Stuff
+    function formTitleChange() {
+      var newTitleInput = document.getElementById("gameTitleInput").value;
+      console.log(newTitleInput);
+      document.getElementById("gameTitle").innerHTML = newTitleInput;
+      document.getElementById("aboutObjectsHeader").innerHTML = "What You Can Find In " + newTitleInput;
+      document.getElementById("homeTextBottom").innerHTML = "<br>This is also where you can play and edit <b>" + newTitleInput + "</b> as created by you :D";
+    };
+    
+    function formDom() {
+      document.body.innerHTML = "<h2 style='font-size: 100px;'>" + document.getElementById("dan").value + "</h2>";
+    };
+    
+    // Map Editor
+    
+    
+    // Game Time
+    function initGame() {
+    };
+    
+    function gameRun() {
+    };
+    
+    // Page Initialization
+    function initPage() {
+      navDisplay(0);
+    };
+    
+    initPage();
+    
+  </script>
+</body>
+</html>
