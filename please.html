@@ -9,8 +9,11 @@
       color: white;
       text-shadow: 1px 1px 4px #000000;
       background-image: url("https://www.smashbros.com/wii/en_us/stages/images/stage18/stage18_thmbnail.jpg");
+      background-size: cover;
       text-align: center;
       font-size: 32px;
+      background-color: #000000;
+      background-blend-mode: overlay;
     }
     
     h1 {
@@ -42,6 +45,14 @@
       width: 100%;
       border: 2px groove #000000;
       border-left: 6px groove #000000;
+      transition: 2s;
+      image-rendering: smooth;
+      opacity: 5%;
+    }
+
+    #melee:hover {
+      image-rendering: pixelated;
+      opacity: 100%;
     }
 
     #orangeimg {
@@ -82,7 +93,7 @@
   <img id="gamecube" src="https://upload.wikimedia.org/wikipedia/commons/a/a5/GameCube_controller.png" alt="funtime devices">
   <br>
 
-  <div style="height: 65%;"></div>
+  <div style="height: 85%;"></div>
   <i>SO we can play</i>
   <br>
   <img id="melee" src="https://upload.wikimedia.org/wikipedia/en/7/75/Super_Smash_Bros_Melee_box_art.png" alt="mee">
