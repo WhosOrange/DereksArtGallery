@@ -1,5 +1,24 @@
 body {
-  background-color: #000000;
-  color: #8888ff;
-  /* TODO: Largely copy over style already in index.html. Then link to it in other pages. */
+    color: #ddddff;
+    background-color: rgb(200, 200, 255);
+    background-image: url(kiwiks11.png);
+    background-size: cover;
+    background-blend-mode: multiply;
+    font-family: Bookman Old Style, Times;
+}
+
+h1 {
+    text-align: center;
+    font-family: sans-serif;
+    box-shadow: 0px 0px 2px 4px #07777777;
+    background-color: #08777777;
+    color: rgba(72, 112, 112, 0.8);
+    border: 2px solid rgba(72, 12, 12, 0.8);
+}
+
+hr {
+    border: 2px solid black;
+    padding: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
