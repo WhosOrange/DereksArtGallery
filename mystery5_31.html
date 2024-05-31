@@ -2,7 +2,7 @@
 <head>
   <title>MThe Gaming Corner DOJO!!</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Mystery of the Orange"
+  <meta name="description" content="Mystery of the Orange">
   <link rel="icon" type="image/jpeg" href="https://www.smashbros.com/wii/en_us/characters/images/donkeykong/donkeykong_s.jpg">
   
   <style>
@@ -142,8 +142,24 @@
     };
 
     function gameDraw() {
-      ctx.fillStyle = "#7777ff";
-      ctx.fillRect(0, 0, 400, 316);
+
+      switch (gameMode) {
+        case 0:
+          ctx.fillStyle = "#7777ff";
+          ctx.fillRect(0, 0, 400, 316);
+          ctx.font = "32px Arial";
+          ctx.fillStyle = "#cdf722";
+          ctx.fillText("Mystery\nof the\nOrange", 1, 1);
+          break;
+        case 1:
+          ctx.fillStyle = "#7777ff";
+          ctx.fillRect(0, 0, 400, 316);
+          break;
+        default:
+          ctx.fillStyle = "#7777ff";
+          ctx.fillRect(0, 0, 400, 316);
+          break;
+      }
     };
 
     function main() {
