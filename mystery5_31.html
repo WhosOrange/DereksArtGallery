@@ -7,6 +7,10 @@
   
   <style>
     body {
+      color: 000000;
+      background-image: linear-gradient(#ff0000, #777777);
+      font-family: Arial, Helvettica, Veranda;
+      text-align: center;
     }
     /* Header Styles */
     #zaHeader {
@@ -14,6 +18,8 @@
     
     /* Table Styles */
     #mainTable {
+      background-image: none;
+      background-color: #ffffff;
     }
 
     #mainTableRow {
@@ -25,6 +31,7 @@
     #mainTableProper {
       border-spacing: 0;
       border: 1px solid #9f9f9f;
+      text-align: center;
     }
 
     #articleHeader {
@@ -84,6 +91,7 @@
                     <td style="width: 16px;"></td>
                   </tr>
                 </table>
+                
                 <table id="articleBody" cellspacing="0">
                   <tr>
                     <td style="width: 30px;"></td>
@@ -92,7 +100,7 @@
                       <p>...well, about 4 months ago actually.</p>
       
                       <p style="text-align: center;">
-                        <canvas id="zaCanvas"></canvas>
+                        <canvas id="zaCanvas" onclick="gameOnClick();"></canvas>
                       </p>
                       <p style="text-align: center;"><b>Behold The Mystery of The Orange!</b></p>
       
@@ -101,9 +109,11 @@
                     <td style="width: 30px"></td>
                   </tr>
                 </table>
+                
               </td>
             </tr>
           </table>
+          
         </td>
       </tr>
     </table>
@@ -124,6 +134,21 @@
     ///////////////////////////
     // MAIN FUNCTION //////////
     ///////////////////////////
+    function gameOnClick() {
+      switch (gameMode) {
+        case 0:
+          // Title Screen
+          gameMode = 1;
+          break;
+        case 1:
+          // Main Game
+          break;
+        default:
+          break;
+      }
+      
+    };
+    
     function gameUpdate() {
       // Doing Physics and stuff
       switch (gameMode) {
