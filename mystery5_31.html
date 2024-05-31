@@ -20,7 +20,9 @@
     #fauxNavTable {
     }
 
-    #mainTAbleProper {
+    #mainTableProper {
+      border-spacing: 0;
+      border: 1px solid #9f9f9f;
     }
 
     #articleHeader {
@@ -28,6 +30,16 @@
       background-color: #141414;
       width: 480px;
       height: 56px;
+    }
+
+    #articleSpacer {
+      width: 480px;
+      height: 30px;
+    }
+
+    #articleBody {
+      width: 480px;
+      padding: 30px;
     }
     
   </style>
@@ -48,7 +60,7 @@
             <td style="background-color: #ff9d0f; width: 5px;"></td>
             <td style="width: 7px;"></td>
             <td style="width: 50px;">
-              
+              <img src="https://www.smashbros.com/wii/en_us/images/icon/category_03.gif" alt="Game Modal Jazz">
             </td>
             <td style="width: 340px;">
               <p style="font-size: 10px; color: #999999;">May 31st Fri. 2024</p>
@@ -60,8 +72,17 @@
             </td>
             <td style="width: 16px;"></td>
           </tr>
-          <tr>
+          <tr id="articleBody">
             <td>
+              <p>Have you heard, the mystery of the orange? It's a tale as old as time...</p>
+              <p>...well, about 4 months ago actually.</p>
+
+              <p style="text-align: center;">
+                <canvas id="zaCanvas"></canvas>
+              </p>
+              <p style="text-align: center;"><b>Behold The Mystery of The Orange!</b></p>
+
+              <p>Are you able to find the mystery? All it takes is a little <i>click.</i></p>
               
             </td>
           </tr>
@@ -74,7 +95,8 @@
     ////////////////////////////
     // GLOBAL VARIABLES ////////
     ////////////////////////////
-    var 
+    var zaCan = document.getElementById("zaCanvas");
+    var ctx = zaCan.getContext("2d");
     
   </script>
 </body>
