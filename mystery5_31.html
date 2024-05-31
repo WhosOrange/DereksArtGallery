@@ -8,9 +8,10 @@
   <style>
     body {
       color: 000000;
-      background-image: linear-gradient(#ff0000, #777777);
+      background-image: linear-gradient(#ffffff, ##e6e7ed);
       font-family: Arial, Helvettica, Veranda;
       text-align: center;
+      max-width: 100%;
     }
     /* Header Styles */
     #zaHeader {
@@ -74,7 +75,7 @@
             <tr>
               <td>
                 <table id="articleHeader" cellspacing="0">
-                  <tr valign="top">
+                  <tr>
                     <td style="background-color: #ff9d0f; width: 5px;"></td>
                     <td style="width: 7px;"></td>
                     <td style="width: 50px;">
@@ -130,6 +131,75 @@
 
     var gameMode = 0;
     var mainInterval;
+
+    var titleY = 100;
+
+    ////////////////////////////
+    // Game Map Class //////////
+    ////////////////////////////
+    function GameTile(inSrc, inX, inY, inSolid) {
+      this.solid = inSolid;
+      this.img = new Image();
+      this.img.src = inSrc;
+      this.offX = inX;
+      this.offY = inY;
+    };
+    
+    function GameMap(inName, inW, inH) {
+      // Set Inputs
+      this.name = inName;
+      this.width = inW;
+      this.height = inH;
+      this.tiles = [];
+      this.actors = [];
+
+      // Initialize Tiles
+      this.resetTiles = function() {
+      };
+
+      // Update Function
+      this.update = function() {
+      };
+
+      // Draw Function
+      this.draw = function() {
+      };
+
+      // Add To Functions
+      this.addActor = function(inActor) {
+      };
+
+      // Set Tile
+      this.setTile(inX, inY, inTile) {
+      };
+      
+    };
+    
+    ////////////////////////////
+    // Game Actor Class ////////
+    ////////////////////////////
+    function GameActor(inX, inY, inW, inH, inName, inSpr, inSolid) {
+      // Set Inputs
+      this.x = inX;
+      this.y = inY;
+      this.w = inW;
+      this.h = inH;
+      this.name = inName;
+      this.sprite = new Image();
+      this.sprite.src = inSpr;
+      this.solid = inSolid;
+      this.stateNo = 0;
+      this.states = [];
+      this.time = 0;
+
+      // Update Function
+      this.update = function() {
+      };
+
+      // Draw Function
+      this.draw = function() {
+      };
+    };
     
     ///////////////////////////
     // MAIN FUNCTION //////////
@@ -170,11 +240,11 @@
 
       switch (gameMode) {
         case 0:
-          ctx.fillStyle = "#7777ff";
+          ctx.fillStyle = "#000000";
           ctx.fillRect(0, 0, 400, 316);
           ctx.font = "32px Arial";
           ctx.fillStyle = "#cdf722";
-          ctx.fillText("Mystery\nof the\nOrange", 1, 100);
+          ctx.fillText("Mystery\nof the\nOrange", 1, titleY);
           break;
         case 1:
           ctx.fillStyle = "#7777ff";
