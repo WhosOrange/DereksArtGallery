@@ -1,0 +1,16 @@
+<html>
+  <head>
+    <title>Notes: 6/17/2024</title>
+  </head>
+
+  <body>
+    <h1>Notes: 6/17/2024</h1>
+    
+    <div id="todo">
+      <ul>
+        <li>Update this page to match offline version of the page</li>
+        <li>Find the other notes</li>
+      </ul>
+    </div>
+  </body>
+</html>
