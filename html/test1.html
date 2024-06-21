@@ -4,9 +4,14 @@
 
     <style>
       /* All Enompassing */
+      html {
+        --keepOn: 20px;
+      }
+      
       body {
         color: #222244;
       }
+
 
       /* Div Specifics */
       #top {
@@ -20,18 +25,25 @@
         background-color: #ffdd00;
         margin-left: 0;
         margin-right: 20%;
+        position: absolute;
         border: 2px solid black;
       }
 
       #main {
         background-color: #aaddff;
         margin-left: 20%;
-        margin-right: 100%;
+        position: absolute;
       }
 
       #bottom {
         background-color: #55ff88;
         border: 2px solid black;
+        position: absolute;
+        top: 28%;
+        padding: 16%;
+        margin-left: 20%;
+        margin-right: 20%;
+        left: var(keepOn);
       }
 
       /* Parts of Top Div */
@@ -70,6 +82,10 @@
     <div id="bottom">
       <i>The Bottom</i>
     </div>
+
+    <script>
+      // edit CSS var here
+    </script>
     
   </body>
 </html>
