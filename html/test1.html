@@ -92,11 +92,13 @@
 
       function moveJohn() {
         johnLoc++;
-        johnLoc = johnLoc % 700;
+        if (johnLoc > 700) {
+          johnLoc = 100;
+        }
         john.style.top = "" + johnLoc + "px";
       };
 
-      moveJohn();
+      setInteval(moveJohn, 3000);
       
       // Others
       
