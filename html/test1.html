@@ -87,10 +87,19 @@
 
     <script>
       // CSS Test
+      var johnLoc = 100;
       var john = document.getElementById("mainTitle");
 
-      john.style.top = "800px";
+      function moveJohn() {
+        johnLoc++;
+        johnLoc = johnLoc % 700;
+        john.style.top = "" + johnLoc + "px";
+      };
 
+      moveJohn();
+      
+      // Others
+      
     </script>
     
   </body>
