@@ -88,7 +88,7 @@
     <script>
       // CSS Test
       var johnLoc = 100;
-      var john = document.getElementById("mainTitle");
+      var john = document.getElementById("main");
 
       function moveJohn() {
         johnLoc++;
@@ -98,7 +98,7 @@
         john.style.top = "" + johnLoc + "px";
       };
 
-      setInteval(moveJohn, 3000);
+      setInterval(moveJohn, 3000);
       
       // Others
       
