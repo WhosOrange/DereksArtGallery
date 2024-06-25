@@ -49,7 +49,40 @@
       </div>
     </div>
 
+    <button id="btnLeft" onclick="">Go Left</button>
     <script>
+      // Player Object
+      function Player(inElm) {
+        this.x = 2;
+        this.y = 3;
+        this.src = "blue"; // will be an image source later
+
+        this.update = function() {
+          inElm.style.top = this.x + "px";
+          inElm.style.left = this.y + "px";
+        };
+
+        this.move = function(inAddX, inAddY) {
+          this.x += inAddX;
+          this.y += inAddY;
+        };
+      };
+
+      // Create Level
+      function Level(inElmLevel, inElmPlayer) {
+        this.player = new Player(inElmPlayer);
+        this.width = 200;
+        this.height = 300;
+        this.src = "#77aaff";
+        this.things = [];
+        this.things[0] = this.player;
+        this.thingsAmt = 1;
+
+        inElmLevel.style.backgroundColor = this.src;
+
+        inElmLevel.style.width = this.width + "px";
+        inElmLevel.style.height = this.height + "px";
+      };
       
     </script>
   </body>
