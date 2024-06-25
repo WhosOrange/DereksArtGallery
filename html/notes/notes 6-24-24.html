@@ -53,6 +53,7 @@
     <script>
       // Player Object
       function Player(inElm) {
+        this.name = "Player";
         this.x = 2;
         this.y = 3;
         this.src = "blue"; // will be an image source later
@@ -70,6 +71,7 @@
 
       // Create Level
       function Level(inElmLevel, inElmPlayer) {
+        this.name = "Level";
         this.player = new Player(inElmPlayer);
         this.width = 200;
         this.height = 300;
@@ -77,12 +79,34 @@
         this.things = [];
         this.things[0] = this.player;
         this.thingsAmt = 1;
+        this.paused = false;
 
         inElmLevel.style.backgroundColor = this.src;
 
         inElmLevel.style.width = this.width + "px";
         inElmLevel.style.height = this.height + "px";
+
+        this.funcDebug = function() {
+          var outStr = "The level known as " + this.name + " is " + this.width + "px wide and " + this.height + "px tall.\nIt features " + this.thingsAmt + " interactable objects, including:";
+          for (i = 0; i < thingsAmt; i++) {
+            outStr += "\n\tNo." + i + ": " + this.things[i].name + " at " + this.things[i].x + ", " + this.things[i].y; 
+          }
+          outStr += "\nThe level is currently active? " + this.paused;
+          outStr += "\nThus is the level.";
+          
+          console.log(outStr); //replace with dedicated log div on page
+        };
+
+        this.update = function() {
+          if (paused != true) {
+            
+          }
+        };
+        
       };
+
+      // The Actual Things
+      var zaLevel = new Level(document.getElementById("testSpace"), document.getElementById("playerThing"));
       
     </script>
   </body>
