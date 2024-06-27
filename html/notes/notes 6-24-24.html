@@ -99,6 +99,28 @@
 
         this.update = function() {
           if (paused != true) {
+            // Get Object Updates
+            for (iUpdate = 0; iUpdate < thingsAmt; iUpdate++) {
+              things[iUpdate].update();
+            }
+            
+            // Adjust Positions
+            for (iMove = 0; iMove < thingsAmt; iMove++) {
+              if (things[iMove].name == "player") {  //TODO: adjust any moving objects, add "type" property to objects
+                if (things[iMove].x > width) {
+                  things[iMove].x--;
+                }
+                if (things[iMove].y > height) {
+                  things[iMove].y--;
+                }
+                if (things[iMove].x < 0) {
+                  things[iMove].x++;
+                }
+                if (things[iMove].y < 0) {
+                  things[iMove].y++;
+                }
+              }
+            }
             
           }
         };
