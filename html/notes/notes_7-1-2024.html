@@ -40,14 +40,52 @@
     Welcome to the notes of July 1st, 2024.
   </div>
 
+  <div id="divToDo">
+    <ul>
+      <li>Try to add relevant pictures</li>
+      <li>Make the divs pretty</li>
+      <li>Make the navigation pretty</li>
+      <li>Add JavaScript to cycle which divs are displayed</li>
+    </ul>
+  </div>
+
   <div id="divAni">
     Today a decade ago, I went to Alaska!
     <br>
     Yesterday, five years ago, I had begun the Game Creek tradition.
   </div>
 
+  <div id="divIdea">
+    <ul>
+      <h3>Terrible Ideas</h3>
+      <li>Experiment with a CDN link to play with different libraries online.</li>
+      <li>Create a history site for something.</li>
+    </ul>
+  </div>
+
   <script>
-    
+    var curDiv = 0;
+    var divArr = [
+      "divHome",
+      "divToDo",
+      "divAni",
+      "divIdea"
+      ];
+
+    var divArrSize = 4;
+
+    function showDiv(inDiv) {
+      for (i = divArrSize; i > 0; i--) {
+        if (i != inDiv) {
+          document.getElementById(divArr[i]).style.display = "none";
+        }
+        else {
+          document.getElementById(divArr[i]).style.display = "block";
+        }
+      }
+    };
+
+    showDiv(0);
   </script>
   
 </body>
