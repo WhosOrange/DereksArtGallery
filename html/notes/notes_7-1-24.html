@@ -19,6 +19,12 @@
       background-color: rgba(255, 255, 255, 0.5);
       border: 2px ridge var(navcolor);
     }
+
+    div {
+      width: 80%;
+      background-color: rgba(0, 128, 255, 0.2);
+      border: 3px ridge black;
+    }
     
     #navigation {
       border: 2px solid black;
@@ -34,8 +40,10 @@
   <hr>
   
   <div id="navigation">
-    <button id="btnHome">Home</button>
-    <button id="btnAniv">Aniversaries</button>
+    <button id="btnHome" onclick="showDiv(0);">Home</button>
+    <button id="btnAniv" onclick="showDiv(2);">Aniversaries</button>
+    <button id="btnHome" onclick="showDiv(3);">Terrible Ideas</button>
+    <button id="btnHome" onclick="showDiv(1);">To Do List</button>
   </div>
 
   <hr>
@@ -68,6 +76,7 @@
       <h3>Terrible Ideas</h3>
       <li>Experiment with a CDN link to play with different libraries online.</li>
       <li>Create a history site for something.</li>
+      <li></li>
     </ul>
   </div>
 
@@ -83,7 +92,7 @@
     var divArrSize = 4;
 
     function showDiv(inDiv) {
-      for (i = divArrSize; i > 0; i--) {
+      for (i = 0; i < divArrSize; i++) {
         if (i != inDiv) {
           document.getElementById(divArr[i]).style.display = "none";
         }
