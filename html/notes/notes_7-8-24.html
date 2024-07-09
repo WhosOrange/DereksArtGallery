@@ -35,6 +35,11 @@
       color: rgb(60,200,70);
     }
 
+    /* Text Classes */
+    .complete {
+      color: rgba(100, 255, 125, 0.8);
+    }
+
     /* Specific Divs */
     #what-to-do {
       width: 80%;
@@ -94,6 +99,8 @@
     <canvas id="yes-we-can-can"></canvas>
     <span id="yes-out"></span>
     <br>
+    <span id="yes-mode-out"></span>
+    <br>
     <p id="yes-descript">Yes, We Can Can make this an interactive thing.</p>
   </div>
 
@@ -113,18 +120,31 @@
 
     var yesCtx = cancan.getContext("2d");
 
-    // Anyways
+    // Global Variables
+    var yesMode = 0;
+
+    // TEST Function 1
     function funTEST1() {
       yesCtx.fillStyle = "#77aaff";
       yesCtx.fillRect(0, 0, screenWidth, screenHeight);
     };
+
+    // TEST Function 2
+    function funTEST2() {
+      yesMode = 1;
+      yesCtx.fillStyle = "#000000";
+      yesCtx.fillRect(0, 0, screenWidth, screenHeight);
+      yesCtx.fillStyle = "#88aaff";
+      yesCtx.fillRect(16, 16, screenWidth - 16, screenHeight - 16);
+      document.getElementById("yes-mode-out").innerHTML = "Mode: " + yesMode;
+    }
     
     
   </script>
   
   <script id="scr-main"> 
     // Main script
-    funTEST1();
+    funTEST2();
   </script>
 </body>
 
