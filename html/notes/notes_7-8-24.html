@@ -17,6 +17,11 @@
       margin-right: auto;
     }
 
+    div {
+      padding-top: 10px;
+      padding-bottom: 15px;
+    }
+
     /* Headings */
     h1 {
       color: rgb(50, 160, 200);
@@ -35,9 +40,13 @@
     }
 
     #interactive-thing {
+      border: 3px solid rgb(100, 100, 255);
+      box-shadow: 0px 3px 7px rgb(100, 100, 255);
+      width: 70%;
     }
 
     #yes-we-can-can {
+      border: 2px solid rgba(100, 100, 255, 0.7);
     }
 
     #nav-div {
@@ -58,6 +67,7 @@
   <div id="nav-div">
     <h2>Navigation:</h2>
     <br>
+    <span style="border: 2px solid brown; color: brown; text-align: right;">To Be Continued...</span>
   </div>
 
   <hr>
@@ -75,7 +85,11 @@
   </div>
 
   <div id="interactive-thing">
+    <h3><u>Interactive Thing</u></h3>
     <canvas id="yes-we-can-can"></canvas>
+    <span id="yes-out"></span>
+    <br>
+    <p id="yes-descript">Yes, We Can Can make this an interactive thing.</p>
   </div>
 
   <hr>
