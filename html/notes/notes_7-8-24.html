@@ -15,6 +15,7 @@
       text-align: center;
       margin-left: auto;
       margin-right: auto;
+      font-family: Bookman Old Style;
     }
 
     div {
@@ -38,6 +39,11 @@
     /* Text Classes */
     .complete {
       color: rgba(100, 255, 125, 0.8);
+    }
+
+    .output {
+      color: rgb(100, 100, 100);
+      font-family: Courier New, monospace;
     }
 
     /* Specific Divs */
@@ -135,7 +141,7 @@
       yesCtx.fillStyle = "#000000";
       yesCtx.fillRect(0, 0, screenWidth, screenHeight);
       yesCtx.fillStyle = "#88aaff";
-      yesCtx.fillRect(16, 16, screenWidth - 16, screenHeight - 16);
+      yesCtx.fillRect(16, 16, (screenWidth - (16*2)), (screenHeight - (16*2)) );
       document.getElementById("yes-mode-out").innerHTML = "Mode: " + yesMode;
     }
     
