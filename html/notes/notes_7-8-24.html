@@ -67,6 +67,7 @@
       <li>Connect to index</li>
       <li>Design something cool with CSS</li>
       <li>Experiment with connecting with CDN link to another library (maybe THREE.js)</li>
+      <li>GOAL: create a mini-demo of the FC concept but just with rudementary graphics or random images (like I'm making it in a libary or something)</li>
     </ul>
   </div>
 
@@ -76,12 +77,32 @@
 
   <hr>
 
-  <div id="footer">
+  <div id="footer-div">
     I guess there are nav and footer elements but they are basically just divs aren't they.
   </div>
 
-  <script>
+  <script id="scr-main"> 
     // Main script
+    
+  </script>
+  
+  <script id="scr-cancan">
+    // Set Up Canvas
+    var cancan = document.getElementById("yes-we-can-can");
+    var screenWidth = 320;
+    var screenHeight = 240;
+    cancan.width = screenWidth;
+    cancan.height = screenHeight;
+
+    var yesCtx = cancan.getContext("2d");
+
+    // Anyways
+    function funTEST1() {
+      yesCtx.fillStyle = "#77aaff";
+      yesCtx.fillRect(0, 0, screenWidth, screenHeight);
+    };
+    
+    
   </script>
 </body>
 
