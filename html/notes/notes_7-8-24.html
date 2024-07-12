@@ -129,10 +129,11 @@
     <h2>Navigation:</h2>
     <br>
     <button class="nav-btn-page" id="btnToDo">What To Do?</button>
-    <button class="nav-btn-page" id="btnInteractive">What To Do?</button>
+    <button class="nav-btn-page" id="btnInteractive">Inteactive Thing?</button>
+    <button class="nav-btn-page" id="btnDanny">Danny?</button>
 
     <br>
-    <button class="nav-btn-link" id="btnIndex" onclick="navFunLink(1);">Home</button>
+    <button class="nav-btn-link" id="btnIndex" onclick="navFunLink(0);">Home</button>
     <!-- <button class="nav-btn-link" id="btnHTML" onclick="navFunLink(1);">July 1st 2024</button> -->
     <br>
     <button class="nav-btn-link" id="btnJuly1" onclick="navFunLink(1);">July 1st 2024</button>
@@ -206,7 +207,11 @@
     
   </script>
   
-  <script id="scr-main"> 
+  <script id="scr-main">
+    // Nav script TBC
+    function navFunLink(input) {
+      document.getElementById("yes-mode-out").innerHTML += " " + input;
+    };
     // Main script
     funTEST2();
   </script>
