@@ -225,10 +225,23 @@
   </script>
   
   <script id="scr-main">
+    // Nav Links Array
+    var navFunArr = [
+      "https://whosorange.github.io/DereksArtGallery/",
+      "https://whosorange.github.io/DereksArtGallery/html/notes/notes_7-1-24.html",
+      "https://whosorange.github.io/DereksArtGallery/html/notes/notes_6-24-24.html",
+      "https://whosorange.github.io/DereksArtGallery/html/notes/notes_6-17-24.html",
+      "https://whosorange.github.io/DereksArtGallery/html/notes/notes_5-20-24.html",
+      "https://whosorange.github.io/DereksArtGallery/html/notes/notes_7-15-24.html"
+      ];
+    
     // Nav script TBC
     function navFunLink(input) {
-      document.getElementById("yes-mode-out").innerHTML += " " + input;
+      //document.getElementById("yes-mode-out").innerHTML += " " + input;
+      window.location.assign(navFunArr[input]);
     };
+
+    
     // Main script
     funTEST2();
   </script>
