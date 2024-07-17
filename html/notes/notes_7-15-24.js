@@ -1,4 +1,16 @@
 // Script for Notes: 7/15/2024
+/*** Navigation Shinanigans **/
+function funNav(input) {
+  var tempSize = narArr.size;
+  for (i = 0; i < tempSize; i++) { 
+    if (navArr[i] == input) {
+      document.getElementById(navArr[i]).style.display = "block";
+    }
+    else {
+      document.getElementById(navArr[i]).style.display = "none";
+    }
+  }
+};
 
 /*** Some Global Set Up Here **/
 var zaCan = document.getElementById("zaCan");
@@ -13,3 +25,5 @@ function funTEST0() {
 };
 
 funTEST0();
+
+
