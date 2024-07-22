@@ -1,5 +1,11 @@
 // Script for Notes: 7/15/2024
 /*** Navigation Shinanigans **/
+var navArr = [
+  "main-div",
+  "to-do-div",
+  "good-things-div"
+];
+
 function funNav(input) {
   var tempSize = narArr.size;
   for (i = 0; i < tempSize; i++) { 
