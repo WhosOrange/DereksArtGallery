@@ -38,8 +38,11 @@ function funTEST1() {
   zaCan.height = 144;
   zaCtx.fillStyle = inputColor;
   zaCtx.fillRect(0, 0, 160, 144);
+  document.getElementById("color-string-box").placeholder = inputColor;
 };
 
+/** Functions to start by default **/
 funTEST0();
+funNav(0);
 
 
