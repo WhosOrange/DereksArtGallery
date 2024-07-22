@@ -3,6 +3,7 @@
 var navArr = [
   "main-div",
   "to-do-div",
+  "canvas-div",
   "good-things-div"
 ];
 
@@ -27,6 +28,15 @@ function funTEST0() {
   zaCan.width = 160;
   zaCan.height = 144;
   zaCtx.fillStyle = "#ffffff";
+  zaCtx.fillRect(0, 0, 160, 144);
+};
+
+// TEST FUNCTION 0: Set up the Canvas
+function funTEST1() {
+  var inputColor = document.getElementById("color-string-box").value;
+  zaCan.width = 160;
+  zaCan.height = 144;
+  zaCtx.fillStyle = inputColor;
   zaCtx.fillRect(0, 0, 160, 144);
 };
 
