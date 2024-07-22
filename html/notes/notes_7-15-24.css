@@ -19,8 +19,9 @@ div {
   border: 2px solid rgba(125, 200, 200, 0.4);
 }
 
-#main-div {
+.content-div {
   max-width: 89%;
+  background-color: rgb(70, 70, 170);
 }
 
 #nav-div {
