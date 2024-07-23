@@ -39,7 +39,16 @@
     #very-top {
       background-color: #000000;
       background-image: url("https://upload.wikimedia.org/wikipedia/commons/6/68/Bob_Ross_Alaska_Painting.jpg");
+      background-size: cover;
       max-height: 320px;
+      
+    }
+
+    @media screen and (max-width: 500px) {
+      #very-top {
+        background-size: contain;
+        height: 20%
+      }
     }
 
     #nav-div {
@@ -66,11 +75,9 @@
   <div id="header">
     <div id="very-top"></div>
     <div id="nav-div">
-      <ul>
-        <li><a>Welcome</a></li>
-        <li><a>To Do</a></li>
-        <li><a>This Week No.1</a></li>
-      </ul>
+      <a>Welcome</a>
+      <a>To Do</a>
+      <a>This Week No.1</a><
     </div>
   </div>
 
