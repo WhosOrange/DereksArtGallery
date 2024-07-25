@@ -4,6 +4,12 @@
   <link rel="icon" type="image/svg" href="https://upload.wikimedia.org/wikipedia/commons/1/18/US_666_Arizona_1956_North.svg">
   
   <style>
+    :root {
+      --bgDay: url("https://upload.wikimedia.org/wikipedia/commons/a/ab/Fairbanks_winter_panorama.JPG")
+      --bgNight: url("https://upload.wikimedia.org/wikipedia/commons/7/72/Aurora_in_Fairbanks.jpg");
+      --bgCur: var(--bgNight)
+    }
+    
     html {
       background-color: rgb(100, 100, 200);
       padding: 0;
@@ -12,7 +18,7 @@
 
     @media screen and (min-width: 501px) {
       html {
-        background-image: url("https://upload.wikimedia.org/wikipedia/commons/7/72/Aurora_in_Fairbanks.jpg");
+        background-image: var(--bgCur);
         background-size: cover;
       }
     }
@@ -199,12 +205,12 @@
         Thank you for looking at this disorganized mess anyway &#x1F640; 
       </p>
       <span style="padding-left: 64px">
-        <i>&mdash; Derek</i>
+        <i id="shmuck" onclick="document.getElementById('shmuck').style.color='orange';">&mdash; Derek</i>
       </span>
       <br>
       <br>
       <br>
-      <i style="float: right; opacity: 0.4;">Who's Orange anyway?</i>
+      <i style="float: right; opacity: 0.4;" onclick="document.querySelector(':root').style.setProperty('--bgCur', '--bgDay');">Who's Orange anyway?</i>
     </div>
 
     <div class="main-div" id="div-to-do">
@@ -265,7 +271,9 @@
         }
       }
     }
-    
+
+    // Always start with these
+    changeNav(0);
     
   </script>
 </body>
