@@ -148,9 +148,9 @@
     <div id="very-top"></div>
     <div id="nav-div">
       <ul>
-        <li><a>Welcome</a></li>
-        <li><a>To Do</a></li>
-        <li><a>This Week No.1</a></li>
+        <li><a onclick="changeDiv(0);">Welcome</a></li>
+        <li><a onclick="changeDiv(1);">To Do</a></li>
+        <li><a onclick="changeDiv(2);">This Week No.1</a></li>
         <li><a href="https://whosorange.github.io/DereksArtGallery/index.html" style="float: right;">Home</a></li>
       </ul>
     </div>
@@ -205,6 +205,26 @@
       <br>
       <i style="float: right; opacity: 0.4;">Who's Orange anyway?</i>
     </div>
+
+    <div class="main-div" id="div-to-do">
+      <h1>THE WORLD FAMOUS TO-DO LIST!!!!</h1>
+      <hr>
+      <ul>
+        <h3><u>To Do:</u></h3>
+        <li>Add stuff to the to-do-list</li>
+      </ul>
+    </div>
+
+    <div class="main-div" id="div-no-1">
+      <h1>This Week No.1</h1>
+      <hr>
+      <p>
+        This week, these abominations were created as a practice of speed meshing.
+      </p>
+      <p>
+        Pictures not found.
+      </p>
+    </div>
     
   </div>
 
@@ -222,11 +242,30 @@
     ];
     var dayOrNight = 0;
 
+    // Change Background function
     function changeDayNight(input) {
-      document.style.backgroundImage = "url(" + backgroundURL[input] + ")";
+      document.style.backgroundImage = "url(" + backgroundURL[input] + ")"; // Change to a CSS varible
+    }
+
+    // Change navigation
+    var arrDiv = [
+      "div-welcome",
+      "div-to-do",
+      "div-no-1"
+    ];
+
+    function changeNav(input) {
+      for (i = 0; i < arrDiv.size; i++) {
+        if (i == input) {
+          document.getElementById(arrDiv[i]).style.display = "block";
+        }
+        else {
+          document.getElementById(arrDiv[i]).style.display = "none";
+        }
+      }
     }
     
-    // Navigation:
+    
   </script>
 </body>
 </html>
