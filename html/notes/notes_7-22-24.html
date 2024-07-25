@@ -262,14 +262,21 @@
     ];
 
     function changeNav(input) {
+      console.log("DEBUG: STARTING!");
       for (i = 0; i < arrDiv.size; i++) {
+        console.log("DEBUG: Entering For-Loop! Currently at interation No. " + i + "!");
         if (i == input) {
+          console.log("DEBUG: Interation No. " + i + " IS the same as input:" + input + ", thus " + arrDiv[i] + " should be visible.");
           document.getElementById(arrDiv[i]).style.display = "block";
+          console.log("DEBUG: SHOULD NOW BE VISIBLE!");
         }
         else {
+          console.log("DEBUG: Else!");
           document.getElementById(arrDiv[i]).style.display = "none";
         }
+        console.log("DEBUG: Done with iteration No. " + i + "!");
       }
+      console.log("DEBUG: End of For-Loop!");
     };
 
     // Always start with these
