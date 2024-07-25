@@ -5,9 +5,9 @@
   
   <style>
     :root {
-      --bgDay: url("https://upload.wikimedia.org/wikipedia/commons/a/ab/Fairbanks_winter_panorama.JPG")
+      --bgDay: url("https://upload.wikimedia.org/wikipedia/commons/a/ab/Fairbanks_winter_panorama.JPG");
       --bgNight: url("https://upload.wikimedia.org/wikipedia/commons/7/72/Aurora_in_Fairbanks.jpg");
-      --bgCur: var(--bgNight)
+      --bgCur: var(--bgNight);
     }
     
     html {
@@ -252,7 +252,7 @@
     // Change Background function
     function changeDayNight(input) {
       document.style.backgroundImage = "url(" + backgroundURL[input] + ")"; // Change to a CSS varible
-    }
+    };
 
     // Change navigation
     var arrDiv = [
@@ -270,7 +270,7 @@
           document.getElementById(arrDiv[i]).style.display = "none";
         }
       }
-    }
+    };
 
     // Always start with these
     changeNav(0);
