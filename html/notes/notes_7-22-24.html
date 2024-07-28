@@ -8,7 +8,7 @@
       --bgDay: url("https://upload.wikimedia.org/wikipedia/commons/a/ab/Fairbanks_winter_panorama.JPG");
       --bgNight: url("https://upload.wikimedia.org/wikipedia/commons/7/72/Aurora_in_Fairbanks.jpg");
       --bgCur: var(--bgNight);
-      --bgColDay: rgba(220, 177, 129, 0.9);
+      --bgColDay: rgba(207, 177, 107, 0.9);
       --bgColNight: rgba(17, 17, 70, 0.9);
       --bgColCur: var(--bgColNight);
       --fgColDay: #ffffff;
@@ -347,12 +347,14 @@
         document.querySelector(':root').style.setProperty('--bgColCur', 'var(--bgColDay)');
         document.querySelector(':root').style.setProperty('--fgColCur', 'var(--fgColDay)');
         document.querySelector(':root').style.setProperty('--h1ColCur', 'var(--h1ColDay)');
+        dayOrNight = 1;
       }
       else {
         document.querySelector(':root').style.setProperty('--bgCur', 'var(--bgNight)');
         document.querySelector(':root').style.setProperty('--bgColCur', 'var(--bgColNight)');
         document.querySelector(':root').style.setProperty('--fgColCur', 'var(--fgColNight)');
         document.querySelector(':root').style.setProperty('--h1ColCur', 'var(--h1ColNight)');
+        dayOrNight = 0;
       }
     };
 
