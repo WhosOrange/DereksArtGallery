@@ -33,15 +33,15 @@
     }
     
     body {
-      background-color: rgba(17, 17, 70, 0.9);
-      color: #aabbff;
+      background-color: var(--bgColCur); 
+      color: var(--fgColCur);
       margin-left: auto;
       margin-right: auto;
       margin-top: 0px;
       margin-bottom: 0px;
       max-width: 1028px;
-      border-left: 8px ridge #aabbff;
-      border-right: 8px ridge #aabbff;
+      border-left: 8px ridge var(--fgColCur);
+      border-right: 8px ridge var(--fgColCur);
       box-shadow: 0px 0px 32px 0px #000000; 
     }
 
@@ -59,7 +59,7 @@
     }
 
     h1 {
-      color: #2372ff;
+      color: var(--h1ColCur);
       text-shadow: 0px 1px 7px #000000;
     }
 
@@ -227,7 +227,7 @@
       <br>
       <br>
       <br>
-      <i style="float: right; opacity: 0.4;" onclick="document.querySelector(':root').style.setProperty('--bgCur', 'var(--bgDay)');">Who's Orange anyway?</i>
+      <i style="float: right; opacity: 0.4;" onclick="changeDayNight();">Who's Orange anyway?</i>
     </div>
 
     <div class="main-div" id="div-to-do">
@@ -335,7 +335,18 @@
 
     // Change Background function
     function changeDayNight(input) {
-      document.style.backgroundImage = "url(" + backgroundURL[input] + ")"; // Change to a CSS varible
+      if (dayOrNight == 0) {
+        document.querySelector(':root').style.setProperty('--bgCur', 'var(--bgDay)');
+        document.querySelector(':root').style.setProperty('--bgColCur', 'var(--bgColDay)');
+        document.querySelector(':root').style.setProperty('--fgColCur', 'var(--fgColDay)');
+        document.querySelector(':root').style.setProperty('--h1ColCur', 'var(--h1ColDay)');
+      }
+      else {
+        document.querySelector(':root').style.setProperty('--bgCur', 'var(--bgNight)');
+        document.querySelector(':root').style.setProperty('--bgColCur', 'var(--bgColNight)');
+        document.querySelector(':root').style.setProperty('--fgColCur', 'var(--fgColNight)');
+        document.querySelector(':root').style.setProperty('--h1ColCur', 'var(--h1ColNight)');
+      }
     };
 
     // Change navigation
