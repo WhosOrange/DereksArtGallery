@@ -88,12 +88,16 @@
     <script>
       // CSS Test
       var johnLoc = 100;
+      var johnVel = 1;
       var john = document.getElementById("main");
 
       function moveJohn() {
-        johnLoc++;
+        johnLoc += johnVel;
         if (johnLoc > 700) {
-          johnLoc = 100;
+          johnVel = -1;
+        }
+        if (johnLoc < 2) {
+          johnVel = 1;
         }
         john.style.top = "" + johnLoc + "px";
         john.innerHTML = johnLoc;
