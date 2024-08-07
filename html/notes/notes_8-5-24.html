@@ -5,21 +5,24 @@
 
   <style>
     :root {
+      --curBGCol: rgb(200, 200, 255);
+      --curFGCol: rgb(10, 10, 25);
+      --curShadow: rgb(0, 0, 8);
     }
 
     html {
     }
 
     body {
-      background-color: rgb(200, 200, 255);
-      color: rgb(10, 10, 25);
+      background-color: var(curBGCol);
+      color: var(curFGCol);
       font-size: 24px;
       font-family: Bookman Old Style, Times;
       text-align: center;
     }
 
     h1 {
-      text-shadow: 2px 2px 8px rgb(0, 0, 8);
+      text-shadow: 2px 2px 8px var(curShadow);
       font-family: Bookman Old Style, Helvetica;
     }
 
