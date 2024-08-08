@@ -38,13 +38,33 @@
   <div>
     What will be here? We'll find out...
   </div>
-  
+
+  <hr>
   <div id="ideas">
     There may be a special posting here by Saturday. You never know...
   </div>
-  
+
+  <hr>
   <div>
     This page may be a little one in terms of ambition. However, this won't be entirely empty. It will probably be a smaller but still stylized page.
   </div>
+
+  <hr>
+  <h3>Put some stuff here: </h3>
+  <div id="fieldofstuff">
+    <textarea id="testTextArea" placeholder="put stuff here..." width="100px" height="64px"></textarea>
+
+    <button id="textdownbutton">Take Me Home With You</button>
+    <a id="textdownlink">I'm not ready yet.</a>
+  </div>
+  <script>
+    var outStr = document.getElementById("testTextArea").value;
+    var outFile = new Blob([outStr], {type: "text/plain"} );
+    var textAnchor = document.getElementById(;
+    textAchor.innerHTML = "I'm Ready!";
+    textAnchor.href = URL.createObjectURL(outFile);
+    textAnchor.download = "i'm-going-home.txt";
+    
+  </script>
 </body>
 </html>
