@@ -14,8 +14,8 @@
     }
 
     body {
-      background-color: var(curBGCol);
-      color: var(curFGCol);
+      background-color: var(--curBGCol);
+      color: var(--curFGCol);
       font-size: 24px;
       font-family: Bookman Old Style, Times;
       text-align: center;
@@ -74,7 +74,7 @@
     function takeMeHome() {
       var outStr = document.getElementById("testTextArea").value;
       var outFile = new Blob([outStr], {type: "text/plain"} );
-      var textAnchor = document.getElementById(;
+      var textAnchor = document.getElementById("textdownlink");
       textAchor.innerHTML = "I'm Ready!";
       textAnchor.href = URL.createObjectURL(outFile);
       textAnchor.download = "i'm-going-home.txt";
