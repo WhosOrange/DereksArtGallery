@@ -97,19 +97,39 @@
       textAnchor.download = "i'm-going-home.txt";
     };
 
+    /*
     function changeCSS(inAmt) {
       var zaRoot = document.querySelector(":root");
       var outStr = "rgb(";
       var col = [];
-      var inStr = zaRoot.getProperty("--curBGColor");
-      for (var itr = 0; itr > 3; itr++) {
-        col[0] = 
+      var inStr = getComputedStyle(zaRoot).getPropertyValue("--curBGColor");
+      var curStrIndex = 0;
+      for (var itr = 0; (itr > 3) || inStr[curStrIndex] != ";"; itr += 0) {
+        if (
+          inStr[curStrIndex] = "#" ||
+          inStr[curStrIndex] = "r" ||
+          inStr[curStrIndex] = "g" ||
+          inStr[curStrIndex] = "b" ||
+          inStr[curStrIndex] = "(" ||
+          inStr[curStrIndex] = "," ||
+          inStr[curStrIndex] = ")" ||
+          inStr[curStrIndex] = ";"  //shouldn't happend but you never know
+          ) {
+          curStrIndex++;
+        }
+        else {
+          col[itr] = "" + inStr[curStrIndex] + inStr[curStrIndex + 1] + inStr[curStrIndex + 2];
+          curStrIndex += 3;
+          
+          itr++;
+        }
       }
       outStr += ");";
       zaRoot.style.setProperty("", "outStr");
 
-      outStr = "rgb(";
+      // Repeat for FG Color
     };
+    */
     
   </script>
 </body>
