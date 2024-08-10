@@ -6,8 +6,8 @@
   <style>
     :root {
       --curBGCol: rgb(200, 200, 255);
-      --curFGCol: rgb(10, 10, 25);
-      --curShadow: rgb(0, 0, 8);
+      --curFGCol: rgb(010, 010, 025);
+      --curShadow: rgb(000, 000, 008);
     }
 
     html {
@@ -95,6 +95,20 @@
       textAnchor.innerHTML = "I'm Ready!";
       textAnchor.href = URL.createObjectURL(outFile);
       textAnchor.download = "i'm-going-home.txt";
+    };
+
+    function changeCSS(inAmt) {
+      var zaRoot = document.querySelector(":root");
+      var outStr = "rgb(";
+      var col = [];
+      var inStr = zaRoot.getProperty("--curBGColor");
+      for (var itr = 0; itr > 3; itr++) {
+        col[0] = 
+      }
+      outStr += ");";
+      zaRoot.style.setProperty("", "outStr");
+
+      outStr = "rgb(";
     };
     
   </script>
