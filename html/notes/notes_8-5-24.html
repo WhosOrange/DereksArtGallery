@@ -34,6 +34,13 @@
     textarea {
       border: 2px ridge yellow;
       background-image: url("https://static.jojowiki.com/images/5/5d/latest/20220607015147/PPP_Speedwagon_Cheer.png");
+      background-repeat: none;
+    }
+
+    @media screen and (max-width: 300px) {
+      textarea {
+        background-size: auto;
+      }
     }
 
     a {
@@ -75,6 +82,7 @@
     <br>
 
     <button id="textdownbutton" onclick="takeMeHome();">Take Me Home With You</button>
+    <br>
     <br>
     <a id="textdownlink">I'm not ready yet.</a>
   </div>
