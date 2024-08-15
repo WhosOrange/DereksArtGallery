@@ -25,14 +25,26 @@
     hr {
       border: 2px outset #7700dd;
     }
+
+    button {
+      text-align: center;
+      font-size: 16px;
+    }
   </style>
 </head>
 
 <body>
   <h1>Notes: 8/12/2024</h1>
   <hr>
+
+  <div style="display: block;">
+    <button onclick="showDivs(0);">Monday</button>
+    <button onclick="showDivs(1);">Tuesday</button>
+    <button onclick="showDivs(2);">Wednesday</button>
+  </div>
   
   <div id="whatsgoingon">
+    <h3>What's Goin' On?</h3>
     <i>So...</i>my washing machine broken. The lid flew <b>right</b> off.
     <br>
     There is a leak from the cold water knob (not the hose...well anymore). We have to turn the water off. 
@@ -43,6 +55,7 @@
   <hr>
 
   <div id="howitsgoin">
+    <h3>How It's Goin'</h3>
     Since Tuesday, the washing machine has been replaced and the water has been turned back on. 
     However, we are without cold water for washing.
     <br>
@@ -50,6 +63,7 @@
   </div>
 
   <div id="wednesday">
+    <h3>Damn.</h3>
     <b>Wednesday: </b> I'm pretty sad these days. If I'm being honest.
     I made a cake in celebration of my departed grandma's birthday, but the day we were to celebrate with our family friends was when the plumbing when haywire.
     My other grandma isn't doing to well either. She has been in the hospital frequently recently. 
@@ -58,8 +72,46 @@
     <br>
     I'd like to perk myself up and add something to the page tomorrow. Like, something cool. Here's hoping.
   </div>
+
+  <div id="thursday">
+    TBA
+  </div>
+  
+  <div id="friday">
+    TBA
+  </div>
+  
+  <div id="satday">
+    TBA
+  </div>
+
+  <div id="funday">
+    TBA
+  </div>
   
   <script>
+    var dayDiv = [
+      "whatsgoinon",
+      "howitsgoin",
+      "wednesday",
+      "thursday",
+      "friday",
+      "satday",
+      "funday"
+    ];
+
+    var displayStyle = "block";
+
+    function showDivs(input) {
+      for (var divItr; divItr < 7; divItr++) {
+        if (dayDiv[divItr] == input) {
+          document.getElementById(divItr).style.display = displayStyle;
+        }
+        else {
+          document.getElementById(divItr).style.display = "none";
+        }
+      };
+    };
     
   </script>
 </body>
