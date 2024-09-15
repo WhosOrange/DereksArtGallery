@@ -66,7 +66,21 @@
     <div id="footer">
         Thus it be the footer.
     </div>
-    
+
+    <div id="mouseCursor">&#128008;</div>
     <!-- script src="notes_9-9-24.js"></script> -->
+    <script>
+        // Member Stuff
+        var mouseMode = 1;
+        var mousePosX = 2;
+        var mousePosX = 2;
+
+        // Move cursor back
+        function mousePosAdjust() {
+            document.getElementById("mouseCursor").style.top = mousePosX - 8;
+            document.getElementById("mouseCursor").style.left = mousePosY - 8;
+        };
+        
+    </script>
 </body>
 </html>
