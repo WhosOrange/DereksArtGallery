@@ -77,14 +77,17 @@
         var mouseEmoji = 128008;
 
         // Move cursor back
-        function mousePosAdjust() {
-            document.getElementById("mouseCursor").style.top = mousePosX - 8;
-            document.getElementById("mouseCursor").style.left = mousePosY - 8;
+        function mousePosAdjust(mE) {
+            mousePosX = mE.clientX - 8;
+            mousePosY = mE.clientY - 8;
+            document.getElementById("mouseCursor").style.top = mousePosX;
+            document.getElementById("mouseCursor").style.left = mousePosY;
         };
 
         // Increase Emoji style
         function mouseEmojiCycle(inc) {
             mouseEmoji += inc;
+            document.getElementById("mouseCursor").innerHTML = "&#" + mouseEmoji + ";";
         };
         
     </script>
