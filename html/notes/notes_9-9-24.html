@@ -32,9 +32,10 @@
     </style>
 </head>
 
-<body>
+<body onmouseover="mousePosAdjust(event);">
     <div id="header">
         <h1>Notes: 9/9/2024</h1>
+        <button id="btnToggleMouse" onclick="toggleMouseMode();"></button>
     </div>
     <hr>
     
@@ -61,7 +62,7 @@
             <li>Halloween Treats</li>
         </ul>
     </div>
-
+    
     <hr>
     <div id="footer">
         Thus it be the footer.
@@ -88,6 +89,15 @@
         function mouseEmojiCycle(inc) {
             mouseEmoji += inc;
             document.getElementById("mouseCursor").innerHTML = "&#" + mouseEmoji + ";";
+        };
+
+        function toggleMouseMode() {
+            if (mouseMode == 1) {
+                mouseMode = 0;
+            }
+            if (mouseMode == 0) {
+                mouseMode = 1;
+            };
         };
         
     </script>
