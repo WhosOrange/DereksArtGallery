@@ -74,6 +74,12 @@
             <li>Halloween Treats</li>
         </ul>
     </div>
+    <hr>
+    
+    <div id="weekend-update">
+        <p><h3>Weekend Update:</h3></p>
+        <p>Though it is the weekend, I will keep these note going. With the moving process, I will be a bit slower than usual.</p>
+    </div>
     
     <hr>
     <div id="footer">
@@ -115,10 +121,12 @@
             if (mouseMode == 1) {
                 mouseMode = 0;
                 mouseEl.style.display = "block";
+                document.getElementById("mouseDebug").innerHTML = "<b>Mouse:</b><br>Mode: " + mouseMode + ", Emoji Code: " + mouseEmoji;
             }
             if (mouseMode == 0) {
                 mouseMode = 1;
                 mouseEl.style.display = "none";
+                document.getElementById("mouseDebug").innerHTML = "<b>Mouse:</b><br>Mode: " + mouseMode + ", Emoji Code: " + mouseEmoji;
             };
         };
         
