@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title>Notes: 9/9/2024</title>
+    <title>Notes: 9/9/2024 &#128008;</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="kiwiks11.png">
     
@@ -74,11 +74,17 @@
         var mouseMode = 1;
         var mousePosX = 2;
         var mousePosX = 2;
+        var mouseEmoji = 128008;
 
         // Move cursor back
         function mousePosAdjust() {
             document.getElementById("mouseCursor").style.top = mousePosX - 8;
             document.getElementById("mouseCursor").style.left = mousePosY - 8;
+        };
+
+        // Increase Emoji style
+        function mouseEmojiCycle(inc) {
+            mouseEmoji += inc;
         };
         
     </script>
