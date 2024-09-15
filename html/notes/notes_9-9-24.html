@@ -37,7 +37,10 @@
 <body onmouseover="mousePosAdjust(event);">
     <div id="header">
         <h1>Notes: 9/9/2024</h1>
+        <br>
         <button id="btnToggleMouse" onclick="toggleMouseMode();"></button>
+        <br>
+        <p id="mouseDebug"></p>
     </div>
     <hr>
     
@@ -85,27 +88,37 @@
         var mousePosX = 2;
         var mousePosX = 2;
         var mouseEmoji = 128008;
+        var mouseEl = document.getElementById("mouseCursor");
 
         // Move cursor back
         function mousePosAdjust(mE) {
             mousePosX = mE.clientX - 8;
             mousePosY = mE.clientY - 8;
-            document.getElementById("mouseCursor").style.top = mousePosX;
-            document.getElementById("mouseCursor").style.left = mousePosY;
+            mouseEl.style.top = mousePosX;
+            mouseEl.style.left = mousePosY;
         };
 
         // Increase Emoji style
         function mouseEmojiCycle(inc) {
             mouseEmoji += inc;
-            document.getElementById("mouseCursor").innerHTML = "&#" + mouseEmoji + ";";
+            if (mouseEmoji < 100000) {
+                mouseEmoji = 199999;)
+            }
+            if (mouseEmoji > 199999) {
+                mouseEmoji = 100000;
+            }
+            mouseEl.innerHTML = "&#" + mouseEmoji + ";";
+            document.getElementById("mouseDebug").innerHTML = "<b>Mouse:</b><br>Mode: " + mouseMode + ", Emoji Code: " + mouseEmoji;
         };
 
         function toggleMouseMode() {
             if (mouseMode == 1) {
                 mouseMode = 0;
+                mouseEl.style.display = "block";
             }
             if (mouseMode == 0) {
                 mouseMode = 1;
+                mouseEl.style.display = "none";
             };
         };
         
