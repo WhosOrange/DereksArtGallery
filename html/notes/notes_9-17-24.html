@@ -8,6 +8,7 @@
     :root {
       --mainColor: #c2eac9;
       --accentColor: #002211;
+      --hlColor: #ddffdd;
     }
 
     body {
@@ -24,14 +25,18 @@
       font-family: Arial Black, Veranda;
       font-weight: bold;
       text-shadow: 0px 2px 3px #000000;
+      color: var(--hlColor);
     }
 
     hr {
       border: 2px solid var(--mainColor);
     }
 
-    .bwTempe {
+    .bgTempe {
       background-image: url("https://upload.wikimedia.org/wikipedia/commons/1/17/Southern_Pacific_Railroad_Bridge%2C_Ash_Avenue_Bridge_and_Mill_Avenue_Bridge_from_Tempe_Butte_looking_northwest._-_Arizona_Eastern_Railroad_Bridge%2C_Spanning_Salt_River%2C_Tempe%2C_HAER_ARIZ%2C7-TEMP%2C2-1_%28cut%29.jpg");
+      width: 30%;
+      height: 90px;
+      background-size: cover;
     }
 
     @keyframes animTitleDrop {
@@ -83,12 +88,19 @@
   <br>
   <br>
   
-  <p><i>I should probably put 0's in the notes dates just to help with sorting order.</i></p>
+  <hr>
+  <div class="bgTempe">
+  </div>
   
   <hr>
   <div>
     I've been working on a couple projects that I'm about to showcase. One of which may be on this page or linked from it. <i>As soon as I fix a bug misreading numbers divisible by ten.</i>
   </div>
+
+  <hr>
   
+  <div id="footer">
+   <p><i>I should probably put 0's in the notes dates just to help with sorting order.</i></p>
+  </div>
 </body>
 </html>
