@@ -15,7 +15,7 @@
       color: var(--mainColor);
       background-color: var(--accentColor);
       text-shadow: 1px 1px 2px #000000;
-      font-size: 16px;
+      font-size: 18px;
       text-align: center;
       font-family: Bookman Old Style, Veranda;
     }
@@ -75,6 +75,26 @@
     #h1Title:hover {
       animation-duration: 5s;
       animation-name: animTitleDrop; 
+    }
+
+    @media screen and (max-width: 400px) {
+      :root {
+        --accentColor(#003310);
+      }
+      
+      hr {
+        width: 100%;
+      }
+
+      .bgTempe {
+        width: 100%;
+      }
+
+      #h1Title:hover {
+        animation: none;
+      }
+
+      
     }
     
   </style>
