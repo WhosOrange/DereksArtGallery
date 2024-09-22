@@ -15,7 +15,7 @@
       color: var(--mainColor);
       background-color: var(--accentColor);
       text-shadow: 1px 1px 2px #000000;
-      font-size: 18px;
+      font-size: 24px;
       text-align: center;
       font-family: Bookman Old Style, Veranda;
     }
@@ -39,6 +39,7 @@
       height: 90px;
       background-size: 100% 90%;
       border: solid 2px var(--mainColor);
+      text-align: center;
     }
 
     @keyframes animTitleDrop {
@@ -79,7 +80,13 @@
 
     @media screen and (max-width: 400px) {
       :root {
-        --accentColor(#003310);
+        --mainColor(#aad7ff);
+        --accentColor(#003351);
+        --hlColor(#aafff7);
+      }
+
+      body {
+        font-size: 27px;
       }
       
       hr {
