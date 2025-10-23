@@ -1,279 +1,141 @@
 <html>
 <head>
-    <title>Derek's Cool Stuff &#x1F525;</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="kiwiks11.png">
-
-    <!-- Notes That Styles will probably seperated into different CSS files -->
-    <style>
-        body {
-            color: #ddddff;
-            background-color: rgb(200, 200, 255);
-            background-image: url(kiwiks11.png);
-            background-size: cover;
-            background-blend-mode: multiply;
-            font-family: Bookman Old Style, Times;
-        }
-
-        a {
-            font-weight: bold;
-            color: #7788ff;
-            font-family: Bookman Old Style;
-            font-size: 24px;
-        }
-
-        a:visited {
-            color: rgb(72, 112, 112);
-            text-decoration: none;
-        }
-        
-        h1 {
-            text-align: center;
-            font-family: sans-serif;
-            box-shadow: 0px 0px 2px 4px #07777777;
-            background-color: #08777777;
-            color: rgba(72, 112, 112, 0.8);
-            border: 2px solid rgba(72, 12, 12, 0.8);
-        }
-        
-        hr {
-            border: 2px solid black;
-            padding: 0px;
-            margin-top: 0px;
-            margin-bottom: 0px;
-        }
-
-        marquee > img {
-            padding: 5px;
-        }
-
-        /* Pages Parts */
-        #zaNavBar {
-            width: 100%;
-            height: 14%;
-            background-color: #00000077;
-            text-align: center;
-            /*background-image: url(kiwiks11.png);
-            background-size: cover;*/
-        }
-        
-        #zaTitle {
-            
-        }
-        
-        #zaContent {
-            border: 4px solid black;
-            width: 90%;
-            margin-left: auto;
-            margin-right: auto;
-            text-shadow: 0px 0px 4px black;
-            background-color: rgba(0, 0, 0, 0.5);
-            box-shadow: 2px 2px 5px black;
-            font-size: 22px;
-        }
-        
-        /* Home Page List */
-        #ulHome {
-            text-shadow: 0px 0px 2px black;
-        }
-        
-        #ulHome li {
-            transition-duration: 2s;
-        }
-        
-        #liDraw {
-            color: #334477;
-        }
-        
-        #liDigi {
-            color: #0000ff;
-        }
-        
-        #liSpr {
-            color: #66bbff;
-        }
-        
-        #liTex {
-            color: #00427c;
-        }
-        
-        #liC++ {
-            color: #0202cc;
-        }
-        
-        #liJava {
-            color: #bb9922;
-        }
-        
-        #liWeb {
-            color: #77ff77;
-        }
-        
-        #liMus {
-            color: #dd2233;
-        }
-        
-        #liFan {
-            color: #110077;
-        }
-        
-        #liProg {
-            color: #009922;
-        }
-        
-        #li3D {
-            color: #000000;
-        }
-
-        /* Media Query */
-        @media screen and (min-width: 420px) {
-            #zaContent {
-                transform: rotateY(20deg) rotateZ(-2deg) rotateX(-22deg);
-            }
-
-            #ulHome li:hover {
-                color: #ffffff;
-            }
-            
-            .mobile-only {
-                display: none;
-            }
-
-        }
-
-        @media screen and (max-width: 419px) {
-            #zaContent {
-                background-color: #000000;
-            }
-
-            #zaNavBar {
-                padding: 16px;
-            }
-        }
-        
-    </style>
+	<!-- Head -->
+	<title>Derek's Art Gallery</title>
+	<link rel="icon" type="image/png" href="kiwiks11.png">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		body {
+			background-color: #000000;
+			color: #ffffff;
+			margin: 0px;
+		}
+		
+		iframe {
+			width: 80%;
+			height: 100%;
+			float: right;
+			border: none; 
+			padding: 0;
+		}
+		
+		#div-nav {
+			width: 20%;
+			height: 100%;
+			float: left;
+			text-align: center;
+			font-family: Bookman Old Style;
+			font-size: 14px;
+			overflow: scroll;
+		}
+		
+		#div-nav table {
+			border: 2px solid #08a6ec;
+			
+			margin-left: auto;
+			margin-right: auto;
+			margin-top: 16px;
+			margin-bottom: 8px;
+		}
+		
+		#div-nav th {
+			background-color: #0c2936;
+			border-bottom: 1px solid #08a6ec;
+			font-family: Arial Black, sans-serif;
+			font-size: 14px;
+			padding-bottom: 4px;
+		}
+		
+		#div-nav tr {
+			padding-left: 8px;
+			padding-right: 8px;
+		}
+		
+		#div-nav li {
+			list-style-type: none;
+		}
+		
+		#div-nav a {
+			transition: 0.3s;
+			color: #ffffff;
+			text-decoration: none;
+		}
+		
+		#div-nav a:hover {
+			color: #08a6ec;
+			text-decoration: underline;
+		}
+		
+		/* add in the mobile version of the nav bar (being horizontal instead of vertical */
+		
+	</style>
 </head>
 
 <body>
-    <div id="zaTop">
-        <marquee direction = "left" style="border: 2px inset rgba(0,0,0,0.01);">
-            <img id="welcomeImg" src="welcome.png" alt="Welcome">
-        </marquee>
-    </div>
-
-    <div id="zaNavBar">
-        <hr>
-        <h2>under construction???</h2>
-        <p>
-            V3 in the works
-        </p>
-    </div>
-
-    <hr>
-    <h1 id="zaTitle">Derek's Cool Stuff</h1>
-    <hr>
-    
-    <div id="zaContent">  
-        <h2>Navigation</h2>
-        <hr>
-        <p>
-            <a href="history.html">History with Tech</a>
-            &mdash;
-            <a href="zaCprogs.html">C/C++ Programs</a>
-            &mdash;
-            <a href="zajava.html">Java Page</a>
-            &mdash;
-            <a href="zaanim.html">Animations</a>
-            &mdash;
-            <a href="zafan.html">Fan Works</a>
-        </p>
-        <hr>
-        <h3>What may be coming in the future?</h3>
-        <ul id="ulHome" style="list-style-type: none;">
-            <li id="liDraw">My Cursed Drawings</li>
-            <li id="liDigi">The Finest Photoshops</li>
-            <li id="liSpr">Spirited Sprites</li>
-            <li id="liTex">Time Enhancing Textures</li>
-            <li id="liC++">Senseless C/C++ Exercises</li>
-            <li id="liJava">Roast Worthy Java</li>
-            <li id="liWeb">Wonderful Web Whackiness. <i>Including some notes taken for School?!?!??</i></li>
-            <li id="liDoom">Doom Creations</li>
-            <li id="liMus">Mildly Amusing Music</li>
-            <li id="liFan">Fan Animations and other goodies</li>
-            <li id="liProg">More Dusty Archival Programs</li>
-            <li id="li3D">3D Models???</li>
-        </ul>
-
-        <p>
-            Also, be sure to check out <a href="https://whosorange.github.io/kingdomoftherma/kot_index.html">The Kingdon of Therma</a> page. 
-            That site is an archived version of a final project for school. And it will be updated to in the future.
-        </p>
-
-        <p>
-            There will also be an archive of various interactive notes (mostly in HTML):
-            <ul>
-                <li><a href="html/test1.html">Something cool maybe</a>
-                <li><a href="html/notes/notes_5-20-24.html">Notes: 5/20/24 - 5/24/24</a></li>
-                <li><a href="html/notes/notes_6-24-24.html">Notes: 6/24/24</a></li>
-                <li><a href="html/notes/notes_7-1-24.html">Notes: 7/1/24</a></li>
-                <li><a href="html/notes/notes_7-8-24.html">Notes: 7/8/24</a></li>
-                <li><a href="html/notes/notes_7-15-24.html">Notes: 7/15/24</a></li>
-                <li><a href="html/notes/notes_7-22-24.html">Notes: 7/22/24</a></li>
-                <li><a href="html/notes/notes_7-29-24.html">Notes: 7/29/24</a></li>
-                <li><a href="please.html">In case you'd like to beg a friend for GameCube controllers, please click here.</a></li>
-            </ul>
-        </p>
-        
-        <p>More information will be added here too, including some history with tech and artistic projects plus work experience. More pages will be added &#x1F63A;</p>
-
-        <div id="Stuff To Still Do">
-            <h3>This was a to do list (isn't that whacky)</h3>
-            <ul>
-                <li>Creating the archive pages for the above list</li>
-                <li>Update this page to feel more home like and attractive</li>
-                <li>Create the archive for certain game characters/stages...</li>
-                <li>Add projects: 
-                    <ul>
-                        <li>Thresh The Sea [2024]</li>
-                        <li>The Quest of Mr. Booty James '06 [2020]</li>
-                        <li>Dad's Windmill [2021]</li>
-                        <li>Spooky Times in Greenland [2021]</li>
-                        <li>Project Johnny [2022]</li>
-                        <li>FC1 [2006]</li>
-                        <li>GL Switch Controller Reader [2020]</li>
-                        <li>Base Management Sim [2023]</li>
-                        <li>The Caves of New Mexico map [2021]</li>
-                        <li>Archived characters [c.2007]</li>
-                        <li>Cold Soup Experience (C++ Exercise) [2021]</li>
-                        <li>Secret Project no. 2024</li>
-                    </ul>
-                </li>
-                <li>Make This list unecessary in the end.</li>
-                <li>Overhaul the themeing and organization.</li>
-            </ul>
-        </div>
-        
-    </div>
-    <hr>
-    <br>
-    <br>
-    
-    <div id="vow" style="opacity: 0.01;" onclick="document.getElementById('vow').style.opacity='0.8';">
-        By the end of the month (hopefully), this github page will be more usable (-_-)
-        </ul>
-    </div>
-    <hr>
-    
-    <div id="zaBottom">
-        <p><i>Thanks for viewing my page.</i></p>
-        <a href="brimachine.html">BRImachine</a>
-    </div>
-    
-    <script>
-    </script>
+	<div id="div-nav">
+		<table id="tbl-navlinks">
+			<tr>
+				<th>Navigation</th>
+			</tr>
+			<tr>
+				<td>
+					<ul>
+						<li><a href="home.html" target="frameMain">Home</a></li>
+						<br>
+						<li><a href="animhub.html" target="frameMain">Animation Hub (WIP)</a></li>
+						<li><a href="faninteractivehub.html" target="frameMain">Interactive Fan Works Hub (WIP)</a></li>
+					</ul>
+				</td>
+			</tr>
+		</table>
+		
+		<table id="tbl-tech-history">
+			<tr>
+				<th>Tech History (WIP)</th>
+			</tr>
+			<tr>
+				<td>
+					<ul>
+						<li><a href="techhistory.html" target="frameMain">History with Technology</a></li>
+						<li><a href="techhistory.html" target="frameMain">C / C++ Projects</a></li>
+						<li><a href="techhistory.html" target="frameMain">Java Projects</a></li>
+					</ul>
+				</td>
+			</tr>
+		</table>
+		
+		<table id="tbl-jokelinks">
+			<tr>
+				<th>Special Pages</th>
+			</tr>
+			<tr>
+				<td>
+					<ul>
+						<li><a href="please.html" target="frameMain">Asking A Friend...</a></li>
+						<li><a href="brimachine.html" target="frameMain">Dr. Bri's Mean Bean Machine</a></li>
+					</ul>
+				</td>
+			</tr>
+		</table>
+		
+		<table id="tbl-outerlinks">
+			<tr>
+				<th>Outer Links</th>
+			</tr>
+			<tr>
+				<td>
+					<ul>
+						<li><a href="https://github.com/WhosOrange/DereksArtGallery" target="frameMain">Site Github Repo</a></li>
+						<li><a href="https://github.com/WhosOrange" target="frameMain">My Github Projects</a></li>
+						<li><a href="https://whosorange.github.io/kingdomoftherma/kot_index.html" target="frameMain">Kingdom of Therma (Archive)</a></li>
+					</ul>
+				</td>
+			</tr>
+		</table>
+		<h4>DAG V3.0</h4>
+	</div>
+	<!-- <iframe src="nav.html" width="20%" height="100%" style="border: none; padding: 0"></iframe> -->
+	<iframe name="frameMain" src="home.html"></iframe>
 </body>
 </html>
-
-
-
-
