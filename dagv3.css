@@ -1,0 +1,60 @@
+/*
+*	DAG V3 CSS Stylesheet
+*
+*/
+
+/* BODY STYLE */
+:root {
+	--phone-color-primary: #ffffff;
+	--phone-color-secondary: #aaddff;
+	--phone-color-bg: #000000;
+	--light-color-primary: #000000;
+	--light-color-secondary: #222277;
+	--light-color-bg: #ffffff;
+	
+	--dark-bg-img: url("backv1.png");
+	
+	--current-color-primary: var(--phone-color-primary);
+	--current-color-secondary: var(--phone-color-secondary);
+	--current-color-bg: var(--phone-color-bg);
+	
+}
+
+@keyframes dagBGMove {
+	0% {
+		background-position-x: 0px;
+		background-position-y: 0px;
+	}
+	100% {
+		background-position-x: 320px;
+		background-position-y: 240px;
+	}
+}
+
+body {
+	background-color: var(--current-color-bg);
+	background-image: var(--dark-bg-img);
+	background-repeat: repeat;
+	animation-name: dagBGMove;
+	animation-iteration-count: infinite;
+	animation-duration: 30s;
+	
+	color: var(--current-color-primary);
+	font-family: Bookman Old Style, sans-serif;
+	text-shadow: 0px 0px 8px #07b2ff, -1px 0px #000000, 1px 0px #000000, 0px 1px #000000, 0px -1px #000000;
+	
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+/* Important Elements */
+h1 {
+	font-family: Arial Black, sans-serif;
+}
+
+sc {
+	color: var(--current-color-secondary);
+}
+
+/* DAGV3 Classes */
